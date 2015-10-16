@@ -190,12 +190,12 @@ LOVETRAVEL.latesttweets = function(){
 
 //init
 LOVETRAVEL.scrolltop();
-LOVETRAVEL.leftmenu();
-LOVETRAVEL.rightsearch();
+// LOVETRAVEL.leftmenu();
+// LOVETRAVEL.rightsearch();
 LOVETRAVEL.homeinview();
-LOVETRAVEL.menusuperfish();
-LOVETRAVEL.responsivenavigation();
-LOVETRAVEL.latesttweets();
+// LOVETRAVEL.menusuperfish();
+// LOVETRAVEL.responsivenavigation();
+// LOVETRAVEL.latesttweets();
 //end init
 
 });

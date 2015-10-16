@@ -16,7 +16,7 @@
   	<!--START CSS--> 
     <link rel="stylesheet" href="css/ctc.css" media="screen"> <!-- main -->
     <link rel="stylesheet" href="rs-plugin/css/settings.css" media="screen" /> <!--rev slider-->
-    <link rel="stylesheet" href="showbizpro/css/settings.css" media="screen" /> <!--showbiz-->
+    
   
     <!--END CSS-->
     
@@ -91,7 +91,11 @@
 		<div class="grid_12">
 			<div class="titlesection blue">
 				<h2 class="titlewithborder"><span>It's Friday Deals!</span></h2>
-			</div>  
+			</div> 
+            <div class="countdown">
+                    Limited Time Only!
+             <span id="clock"></span>
+          </div> 
 		</div>
 				
 				
@@ -156,12 +160,12 @@
                             <!--left-->
                             <div class="leftarchivetour">
                             
-                                <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="img/tours/photos/img1.jpg"></a>
+                                <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="img/inspiration-europe(thumb).jpg"></a>
                             
                                 <div class="pricetitleleftarchivetour">
                                     
-                                    <div class="priceleftarchivetour">
-                                        <p>1000 $</p>
+                                    <div class="priceleftarchivetour" id="sale-btn">
+                                        <a href="#" id=""><p>Buy</p></a>
                                     </div>
                                     <p class="titleleftarchivetour">For person</p>
                                 </div>
@@ -174,7 +178,7 @@
                             <div class="rightarchivetour">
                             
                                 <div class="titledayarchivetour">
-                                    <a href="single-project.html"><p class="titlearchivetour">BRAZIL</p></a>
+                                    <a href="single-project.html"><p class="titlearchivetour">2nd pax $500 OFF*</p></a>
                                 
                                     <div class="dayarchivetour">
                                         <p>15</p>
@@ -212,7 +216,7 @@
                             <!--left-->
                             <div class="leftarchivetour">
                             
-                                <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="img/tours/photos/img2.jpg"></a>
+                                <a href="single-project.html"><img alt="" class="imgleftarchivetour opacity" src="img/inspiration-europe(thumb).jpg"></a>
                             
                                 <div class="pricetitleleftarchivetour">
                                     
@@ -1220,6 +1224,7 @@
 	<!--Start js-->    
     <script src="js/jquery.min.js"></script> <!--Jquery-->
     <script src="js/jquery-ui.js"></script> <!--Jquery UI-->
+    <script src="js/jquery.countdown.min.js"></script>
     <script src="js/excanvas.js"></script> <!--canvas need for ie-->
     <script src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script> <!--rev slider-->
     <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> <!--rev slider-->
@@ -1231,10 +1236,8 @@
     <script src="js/jquery.inview.min.js"></script> <!--inview-->
 	<script src="js/menu/hoverIntent.js"></script> <!--superfish-->
 	<script src="js/menu/superfish.min.js"></script> <!--superfish-->
-    <script src="js/menu/tinynav.min.js"></script> <!--tinynav-->
-	 <script src="js/jquery.parallax-1.1.3.js"></script> <!--parallax-->
+	<script src="js/jquery.parallax-1.1.3.js"></script> <!--parallax-->
 	<script src="js/isotope/jquery.isotope.min.js"></script> <!--isotope-->
-	<script src="js/twitter/jquery.twitterfeed.min.js"></script> <!--twitter-->
     <script src="js/settings.js"></script> <!--settings-->
     <!--End js-->
 	
@@ -1262,7 +1265,24 @@
 		});	//ready
 		//end revolution slider
 		
-		
+		//start countdown
+        $('#clock').countdown('2015/10/18 00:06:56')
+  .on('update.countdown', function(event) {
+    var format = '%H:%M:%S';
+   if(event.offset.days > 0) {
+     format = '%-d day%!d ' + format;
+  }
+   if(event.offset.weeks > 0) {
+    format = '%-w week%!w ' + format;
+   }
+   $(this).html(event.strftime(format));
+ })
+ .on('finish.countdown', function(event) {
+   $(this).html('This offer has expired!')
+     .parent().addClass('disabled');
+     $('#sale-btn').remove();
+ 
+});
 	
 		
 		
