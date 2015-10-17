@@ -1,0 +1,77 @@
+.ce-countdown--theme-4 {
+	background: #ec667a;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 60px;
+	font-weight: 300;
+	min-height: 90px;
+	padding: 30px;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.ce-countdown--theme-4 span {
+	font-weight: 900;
+}
+
+@media all and (max-width: 730px) {
+	.ce-countdown--theme-4 {
+		font-size: 30px;
+	}
+}
+
+/* Theme 7 ----------------------------------------------------------------- */
+
+.ce-countdown--theme-7 {
+	background: #292929;
+	color: #00deff;
+	font-family: 'Exo', sans-serif;
+	font-size: 90px;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+.ce-countdown--theme-7 .ce-digits {
+	display: inline-block;
+	min-width: 1.6em;
+}
+
+.ce-countdown--theme-7 .ce-digits span {
+	bottom: -1em;
+	display: inline-block;
+	min-width: .7em;
+	position: relative;
+	text-align: left;
+	-moz-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.ce-countdown--theme-7 .ce-digits span:first-child {
+	text-align: right;
+}
+
+.ce-countdown--theme-7 .ce-digits span.ce-animate {
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-moz-transition: -moz-transform .3s;
+	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+
+.ce-countdown--theme-7 .ce-digits span:before {
+	content: attr(data-old);
+	position: absolute;
+	top: -100%;
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+@media all and (max-width: 600px) {
+	.ce-countdown--theme-7 {
+		font-size: 40px;
+	}
+}

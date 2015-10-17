@@ -92,10 +92,18 @@
 			<div class="titlesection blue">
 				<h2 class="titlewithborder"><span>It's Friday Deals!</span></h2>
 			</div> 
-            <div class="countdown">
-                    Limited Time Only!
-             <span id="clock"></span>
-          </div> 
+            <!-- first countdown -->
+          <div class="ce-countdown-1 ce-countdown--theme-4" id="cd-1">
+            <span class="ce-days"></span> <span class="ce-days-label"></span> until Sales Day!
+          </div>
+
+          <div class="ce-countdown-2 ce-countdown--theme-7">
+            <span class="ce-digits ce-hours"></span> :
+            <span class="ce-digits ce-minutes"></span> :
+            <span class="ce-digits ce-seconds"></span>
+        </div>
+
+
 		</div>
 				
 				
@@ -1224,7 +1232,7 @@
 	<!--Start js-->    
     <script src="js/jquery.min.js"></script> <!--Jquery-->
     <script src="js/jquery-ui.js"></script> <!--Jquery UI-->
-    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.counteverest.min.js"></script>
     <script src="js/excanvas.js"></script> <!--canvas need for ie-->
     <script src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script> <!--rev slider-->
     <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> <!--rev slider-->
@@ -1266,25 +1274,48 @@
 		//end revolution slider
 		
 		//start countdown
-        $('#clock').countdown('2015/10/18 00:06:56')
-  .on('update.countdown', function(event) {
-    var format = '%H:%M:%S';
-   if(event.offset.days > 0) {
-     format = '%-d day%!d ' + format;
-  }
-   if(event.offset.weeks > 0) {
-    format = '%-w week%!w ' + format;
-   }
-   $(this).html(event.strftime(format));
- })
- .on('finish.countdown', function(event) {
-   $(this).html('This offer has expired!')
-     .parent().addClass('disabled');
-     $('#sale-btn').remove();
- 
-});
-	
-		
+     $('.ce-countdown-1').countEverest({
+                    //Set your target date here!
+                    day: 20,
+                    month: 10,
+                    year: 2015
+                });
+
+	$('.ce-countdown-2').countEverest({
+                    //Set your target date here!
+                    day: 21,
+                    month: 10,
+                    year: 2015,
+                    onChange: function() {
+                        countEverestAnimate($('.ce-digits span'));
+                    }
+                });
+		function countEverestAnimate($el) {
+                    $el.each( function() {
+                        var $this = $(this),
+                            fieldText = $this.text(),
+                            fieldData = $this.attr('data-value'),
+                            fieldOld = $this.attr('data-old');
+
+                        if (typeof fieldOld === 'undefined') {
+                            $this.attr('data-old', fieldText);
+                        }
+
+                        if (fieldText != fieldData) {
+                            $this
+                                .attr('data-value', fieldText)
+                                .attr('data-old', fieldData)
+                                .addClass('ce-animate');
+
+                            window.setTimeout(function() {
+                                $this
+                                    .removeClass('ce-animate')
+                                    .attr('data-old', fieldText);
+                            }, 300);
+                        }
+                    });
+                }
+
 		
 		//start tooltip
 		$(document).ready(function() {
