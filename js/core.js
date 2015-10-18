@@ -88,7 +88,6 @@ $(document).ready(function() {
             at: "center center"
         }
     });
-
 });
 //end tooltip
 
