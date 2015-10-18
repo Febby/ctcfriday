@@ -13,15 +13,14 @@
     <meta name="author" content="Ctc travel"> <!--insert your name here-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--meta responsive-->
     
-  	<!--START CSS--> 
+  	<!--Core CSS--> 
     <link rel="stylesheet" href="css/ctc.css" media="screen"> <!-- main -->
     <link rel="stylesheet" href="rs-plugin/css/settings.css" media="screen" /> <!--rev slider-->
     
-  
-    <!--END CSS-->
-    
     <!--google fonts-->
     <link href='//fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
     <!--[if lt IE 9]>  
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
@@ -48,21 +47,9 @@
 			<ul>
                 
                 <!-- SLIDE  -->
-				<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" >
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="10000" >
 					<img src="img/worlwide-tour-banner.jpg" style='background-color:#b2c4cc' alt=""  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                 </li>
-                <!-- SLIDE  -->
-				
-				<!-- SLIDE  -->
-				<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" >
-					<img src="img/rev-slider/2/slide2.jpg" style='background-color:#b2c4cc' alt=""  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-				</li>
-                <!-- SLIDE  -->
-                
-                <!-- SLIDE  -->
-				<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" >
-					<img src="img/rev-slider/3/slide3.jpg" style='background-color:#b2c4cc' alt=""  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-				</li>
                 <!-- SLIDE  -->
 		
 			</ul>
@@ -91,7 +78,40 @@
 		<div class="grid_12">
 			<div class="titlesection blue">
 				<h2 class="titlewithborder"><span>It's Friday Deals!</span></h2>
-			</div> 
+			 <ul class="social-share-btns">
+
+                    <li class="facebook"> 
+                        <a title="Share it On Facebook" class="tooltip" href="">
+                            <i class="fa fa-facebook"></i>
+                            <span class="share-text">Share on Facebook</span>
+                        </a> 
+                    </li><!--
+
+                    --><li class="twitter"> 
+                        <a title="Share it On Twitter" class="tooltip" href="">
+                            <i class="fa fa-twitter"></i>
+                            <span class="share-text">Share on Twitter</span>
+                        </a> 
+                    </li><!--
+
+                    --><li class="email"> 
+                        <a title="Send It To A Friend" class="tooltip" href="#"> 
+                            <i class="fa fa-envelope-o"></i> 
+                            <span class="share-text">Share via Email</span>
+                        </a> 
+                    </li><!--
+
+                    --><li class="whatsapp"> 
+                        <a title="Share it On Whatsapp" class="tooltip" href="#"> 
+                            <i class="fa fa-whatsapp"></i> 
+                            <span class="share-text">Share on Whatsapp</span>
+                        </a> 
+                    </li>
+
+            </ul>
+
+            </div>
+
             <!-- first countdown -->
           <div class="ce-countdown-1 ce-countdown--theme-4" id="cd-1">
             <span class="ce-days"></span> <span class="ce-days-label"></span> until Sales Day!
@@ -1229,6 +1249,7 @@
 	<script src="js/jquery.parallax-1.1.3.js"></script> <!--parallax-->
 	<script src="js/isotope/jquery.isotope.min.js"></script> <!--isotope-->
     <script src="js/settings.js"></script> <!--settings-->
+    <script src="js/share.js"></script>
     <!--End js-->
 	
 	<script type='text/javascript'>
