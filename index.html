@@ -1252,10 +1252,7 @@
 				fullScreenOffsetContainer: "#homeservices"
 			});
 
-		});	//ready
-		//end revolution slider
-		
-		//start countdown
+                //start countdown
      $('.ce-countdown-1').countEverest({
                     //Set your target date here!
                     day: 20,
@@ -1263,16 +1260,17 @@
                     year: 2015
                 });
 
-	$('.ce-countdown-2').countEverest({
+    $('.ce-countdown-2').countEverest({
                     //Set your target date here!
-                    day: 21,
+                    day: 22,
                     month: 10,
-                    year: 2015,
-                    timeZone: 1,
-                    onChange: function() {
-                        countEverestAnimate($('.ce-digits span'));
-                    }
+                    year: 2015
                 });
+
+		});	//ready
+		//end revolution slider
+		
+	
 		function countEverestAnimate($el) {
                     $el.each( function() {
                         var $this = $(this),
