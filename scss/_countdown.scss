@@ -1,5 +1,5 @@
 .ce-countdown--theme-4 {
-	background: #ec667a;
+	background: #036362;
 	color: #fff;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 60px;
@@ -20,58 +20,119 @@
 	}
 }
 
-/* Theme 7 ----------------------------------------------------------------- */
+/* Theme 6 ----------------------------------------------------------------- */
 
-.ce-countdown--theme-7 {
-	background: #292929;
-	color: #00deff;
-	font-family: 'Exo', sans-serif;
-	font-size: 90px;
-	height: 1em;
-	line-height: 1em;
-	overflow: hidden;
+.ce-countdown--theme-6 {
+	background: rgba(3, 99, 98, 0.81);
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0;
+	font-weight: 800;
+	padding: 30px;
+	text-align: center;
 }
 
-.ce-countdown--theme-7 .ce-digits {
+.ce-countdown--theme-6 .ce-col {
 	display: inline-block;
-	min-width: 1.6em;
+	font-size: 24px;
+	margin: 0 0 0 4.513888888889%;
+	width: 30.324074074074%;
 }
 
-.ce-countdown--theme-7 .ce-digits span {
-	bottom: -1em;
-	display: inline-block;
-	min-width: .7em;
+.ce-countdown--theme-6 .ce-col:first-child {
+	margin: 0;
+}
+
+.ce-countdown--theme-6 .ce-hours,
+.ce-countdown--theme-6 .ce-minutes,
+.ce-countdown--theme-6 .ce-seconds {
+	color: #fff;
+	display: block;
+	font-size: 46px;
+	font-weight: 300;
+	height: 66px;
+	line-height: 66px;
+	margin-bottom: 10px;
+}
+
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-hours,
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-minutes,
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-seconds {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+}
+
+.ce-countdown--theme-6 .ce-flip-wrap {
 	position: relative;
-	text-align: left;
-	-moz-transition: none;
-	-webkit-transition: none;
-	transition: none;
 }
 
-.ce-countdown--theme-7 .ce-digits span:first-child {
-	text-align: right;
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-flip-wrap {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: 0s;
+	-moz-transition: 0s;
+	transition: 0s;
 }
 
-.ce-countdown--theme-7 .ce-digits span.ce-animate {
-	-moz-transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
-	transform: translateY(-100%);
-	-moz-transition: -moz-transform .3s;
-	-webkit-transition: -webkit-transform .3s;
-	transition: transform .3s;
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-animate .ce-flip-wrap {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	transition: 0.6s;
 }
 
-.ce-countdown--theme-7 .ce-digits span:before {
-	content: attr(data-old);
+.ce-countdown--theme-6 .ce-flip-wrap .ce-flip-front,
+.ce-countdown--theme-6 .ce-flip-wrap .ce-flip-back {
+	background: #00bfa0;
+	height: 66px;
+	left: 0;
 	position: absolute;
-	top: -100%;
-	-moz-transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	top: 0;
+	width: 100%;
 }
 
-@media all and (max-width: 600px) {
-	.ce-countdown--theme-7 {
-		font-size: 40px;
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-flip-wrap .ce-flip-front,
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-flip-wrap .ce-flip-back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+html:not([class*='ce-ie']) .ce-countdown--theme-6 .ce-flip-wrap .ce-flip-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+@media all and (max-width: 560px) {
+	.ce-countdown--theme-6 .ce-col {
+		font-size: 12px;
+	}
+
+	.ce-countdown--theme-6 .ce-hours,
+	.ce-countdown--theme-6 .ce-minutes,
+	.ce-countdown--theme-6 .ce-seconds {
+		color: #fff;
+		display: block;
+		font-size: 24px;
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.ce-countdown--theme-6 .ce-col {
+		margin: 0 2% 0;
+	}
+
+	.ce-countdown--theme-6 .ce-flip-wrap .ce-flip-front,
+	.ce-countdown--theme-6 .ce-flip-wrap .ce-flip-back {
+		height: 40px;
 	}
 }
