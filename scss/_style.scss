@@ -34,6 +34,11 @@ h3{
 	padding:0px;
 	font-weight:normal;	
 }
+.salesend{
+	text-align:center;
+	font-size:1.5em;
+	text-transform:uppercase;
+}
 h4{
 	color:#96a0af;
 	font-size:17px;
@@ -960,7 +965,18 @@ canvas{
 .footerhomeprices a{
 	color:#888;	
 }
+.email_link{
+	transition: 0.7 all;
+	a{
+		color: #F9B02D;
 
+
+		&:hover{
+			color:#D08D16;
+			
+		}
+	}
+}
 .contacthomeprice, .morehomeprice{
 	width:50%;
 	float:left;
@@ -1295,7 +1311,7 @@ canvas{
 .pricetitleleftarchivetour{
 	float:left;
 	position:absolute;
-	bottom:-10px;
+	bottom:0;
 	width:100%;
 }
 .titleleftarchivetour{
@@ -1303,9 +1319,9 @@ canvas{
 	background-color: #026260;
     color: #FDFDFD;
 	font-size:15px;	
-	margin-top:25px;
+	// margin-top:25px;
 	// margin-left: 90px;
-	margin-bottom:25px;
+	// margin-bottom:25px;
 }
 .priceleftarchivetour{
 	display:none;
@@ -1342,7 +1358,9 @@ div#sale-btn:hover {
 	width:100%;		
 	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(2, 98, 96, 1.0);
 	box-shadow: inset 01px 0px 0px 1px rgba(2, 98, 96, 1.0);
-
+// #sale-btn{
+// 	display:none;
+// }
 
 p{
 
@@ -1353,13 +1371,15 @@ p{
 
 .dayarchivetour{
 	background-color:#F9B02D;
+	border-radius: 10px 0 0 0;
 	padding:10px 20px;
 	float:right;
 	text-align:center;
 	line-height:1;
 	transition:0.8s all;
 	&:hover{
-		background-color: #EE6B01;
+	background-color: #EE6B01;
+    border-right: 15px #EE6B01 solid;
 	}
 }
 .dayarchivetour p{
@@ -2565,7 +2585,7 @@ blockquote{
 /*start class*/
 .titlesection{
 	text-align:center;
-	padding:0px 0px 40px 0px;	
+	padding:0px 0px 1px 0px;	
 }
 .titlesection h4{
 	margin-top:10px;	

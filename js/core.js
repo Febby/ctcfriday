@@ -6,7 +6,7 @@ $(document).ready(function() {
     revapis = jQuery('.tp-banner-full-screen').revolution({
         delay: 10000000,
         startwidth: 1170,
-        startheight: 650,
+        startheight: 450,
         hideThumbs: 10,
         navigationType: "none",
         fullWidth: "off",
@@ -26,57 +26,7 @@ $(document).ready(function() {
 
     // });
 
-    $('.ce-countdown-1,.ce-countdown-2').countEverest({
-        //Set your target date here!
-        day: 21,
-        month: 10,
-        year: 2015,
-        timeZone: 7,
-        hoursWrapper: '.ce-hours .ce-flip-back',
-        minutesWrapper: '.ce-minutes .ce-flip-back',
-        secondsWrapper: '.ce-seconds .ce-flip-back',
-        wrapDigits: false,
-        onChange: function() {
-            countEverestAnimate($('.ce-countdown-2 .ce-col>div'), this);
-        },
-        onComplete: function() {
-            console.log("complete");
-            // $('#sale-btn').css({
-            //     visibility: 'visible'
-
-            // });
-
-        }
-
-
-    });
-
-    function countEverestAnimate($el, data) {
-        $el.each(function(index) {
-            var $this = $(this),
-                $flipFront = $this.find('.ce-flip-front'),
-                $flipBack = $this.find('.ce-flip-back'),
-                field = $flipBack.text(),
-                fieldOld = $this.attr('data-old');
-            if (typeof fieldOld === 'undefined') {
-                $this.attr('data-old', field);
-            }
-            if (field != fieldOld) {
-                $this.addClass('ce-animate');
-                window.setTimeout(function() {
-                    $flipFront.text(field);
-                    $this
-                        .removeClass('ce-animate')
-                        .attr('data-old', field);
-                }, 800);
-            }
-        });
-    }
-
-    //Fallback for Internet Explorer
-    if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
-        $('html').addClass('ce-ie');
-    }
+    
 });
 
 
@@ -88,6 +38,16 @@ $(document).ready(function() {
             at: "center center"
         }
     });
+    $(".tooltip-date").tooltip({
+        position: {
+            my: "left+15 center", at: "right center"
+        }
+    });
+       $(".tooltip-date").on("click", function(event){
+   
+        event.preventDefault();
+            
+            });
 });
 //end tooltip
 
@@ -118,11 +78,11 @@ $(document).ready(function() {
 
 
 //start parallax
-jQuery(document).ready(function() {
+// jQuery(document).ready(function() {
 
-    $('.sectionparallax').parallax("100%", 0.04);
+//     $('.sectionparallax').parallax("100%", 0.04);
 
-});
+// });
 //end parallax
 
 
