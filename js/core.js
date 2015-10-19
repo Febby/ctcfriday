@@ -20,12 +20,9 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    //start countdown
-    // $('#sale-btn').css({
-    //     visibility: 'hidden'
-
-    // });
-
+    // hide all button once countdown complete
+   
+// $("[id^=sale-btn]").hide();
     
 });
 
