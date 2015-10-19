@@ -21,14 +21,14 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     //start countdown
-    $('#sale-btn').css({
-        visibility: 'hidden'
+    // $('#sale-btn').css({
+    //     visibility: 'hidden'
 
-    });
+    // });
 
     $('.ce-countdown-1,.ce-countdown-2').countEverest({
         //Set your target date here!
-        day: 20,
+        day: 21,
         month: 10,
         year: 2015,
         timeZone: 7,
@@ -41,10 +41,10 @@ $(document).ready(function() {
         },
         onComplete: function() {
             console.log("complete");
-            $('#sale-btn').css({
-                visibility: 'visible'
+            // $('#sale-btn').css({
+            //     visibility: 'visible'
 
-            });
+            // });
 
         }
 
