@@ -30,6 +30,8 @@
     <![endif]-->
     <script type="text/javascript">
     function soonCompleteCallback() {
+      console.log("Sales Ended");
+      sweetAlert("Sorry...", "Sales have ended", "error");
         $("[id^=sale-btn]").hide();
     }
     </script>
@@ -104,7 +106,8 @@
                     </ul>
                 </div>
                 <h3 class="salesend">Sales Ends in...</h3>
-                <div class="soon" id="my-soon-counter" data-due="2015-10-21T12:00:00" data-event-complete="soonCompleteCallback" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
+                <!-- value 2015-10-21T12:00:00 -->
+                <div class="soon" id="my-soon-counter" data-due="2015-10-21T00:00:00" data-event-complete="soonCompleteCallback" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
                 </div>
             </div>
         </div>
@@ -152,7 +155,7 @@
                                     </a>
                                 </div>
                                 <div class="descriptioniconsarchivetour">
-                                    <p class="descriptionarchivetour" id="sale-btn">
+                                    <p class="descriptionarchivetour">
                                     <span class="ddate">Departure Date:</span>
                                     Jan 7, 21, 25, Feb 18, 21, Mar 6 </p>
                                     <!--   <p class="iconsarchivetour">
@@ -664,7 +667,7 @@
         <div class="container clearfix">
             <div class="grid_12">
                 <div class="titlesection green">
-                    <h2 class="titlewithborder"><span>Cruise </span></h2>
+                    <h2 class="titlewithborder"><span>Cruise Tour Package </span></h2>
                 </div>
             </div>
             <div class="dividerheight40"></div>
@@ -672,7 +675,99 @@
             <section id="internalpage">
                 <!--worldwide tour container-->
                 <div class="container clearfix">
-                    <h2 style="text-align:center;">Coming Soon</h2>
+                    <div class="grid_4">
+                        <!--start archivetour-->
+                        <div class="archivetour yellow fade-left animate1 animated fadeInLeft">
+                            <!--left-->
+                            <div class="leftarchivetour">
+                                <a href="#"><img alt="" class="imgleftarchivetour opacity" src="img/AC17R.jpg"></a>
+                                <div class="pricetitleleftarchivetour">
+                                    <p class="titleleftarchivetour">17D Amazing Alaska &amp; Canadian Rockies Tour (AC17R)</p>
+                                </div>
+                            </div>
+                            <!--end left-->
+                            <!--right-->
+                            <div class="rightarchivetour">
+                                <div class="titledayarchivetour">
+                                    <p class="titlearchivetour">Free upgrade to Balcony</p>
+                                    <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/17d-amazing-alaska-canadian-rockies-tour" target="_blank">
+                                        <div class="dayarchivetour" id="sale-btn">
+                                            <p>Book</p>
+                                            <span>Now</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="descriptioniconsarchivetour">
+                                    <p class="descriptionarchivetour"><span class="ddate">All Departure Date</span></p>
+                                   
+                                </div>
+                            </div>
+                            <!--end right-->
+                        </div>
+                        <!--end archivetour-->
+                    </div>
+                    <div class="grid_4">
+                        <!--start archivetour-->
+                        <div class="archivetour yellow fade-left animate1 animated fadeInLeft">
+                            <!--left-->
+                            <div class="leftarchivetour">
+                                <a href="#"><img alt="" class="imgleftarchivetour opacity" src="img/SV7DA.png"></a>
+                                <div class="pricetitleleftarchivetour">
+                                    <p class="titleleftarchivetour">Australia 8D6N Adelaide, Melbourne, Tasmania &amp; Sydney Fly-Cruise (SV7DA)</p>
+                                </div>
+                            </div>
+                            <!--end left-->
+                            <!--right-->
+                            <div class="rightarchivetour">
+                                <div class="titledayarchivetour">
+                                    <p class="titlearchivetour">Free upgrade to Balcony</p>
+                                    <a href="https://www.ctc.com.sg/package-tours/cruise-tours/australia-8d6n-adelaide-melbourne-tasmania-sydney-fly-cruise" target="_blank">
+                                        <div class="dayarchivetour" id="sale-btn">
+                                            <p>Book</p>
+                                            <span>Now</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="descriptioniconsarchivetour">
+                                    <p class="descriptionarchivetour"><span class="ddate">All Departure Date</span></p>
+                                   
+                                </div>
+                            </div>
+                            <!--end right-->
+                        </div>
+                        <!--end archivetour-->
+                    </div>
+                    <div class="grid_4">
+                        <!--start archivetour-->
+                        <div class="archivetour yellow fade-left animate1 animated fadeInLeft">
+                            <!--left-->
+                            <div class="leftarchivetour">
+                                <a href="#"><img alt="" class="imgleftarchivetour opacity" src="img/AC20D.jpg"></a>
+                                <div class="pricetitleleftarchivetour">
+                                    <p class="titleleftarchivetour">20D Alaska, Denali with Canadian Rockies Total Experience (AC20D)</p>
+                                </div>
+                            </div>
+                            <!--end left-->
+                            <!--right-->
+                            <div class="rightarchivetour">
+                                <div class="titledayarchivetour">
+                                    <p class="titlearchivetour">up to $300 OFF* 2nd pax</p>
+                                    <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/20d-alaska-denali-canadian-rockies-total-experience#holidaytour1" target="_blank">
+                                        <div class="dayarchivetour" id="sale-btn">
+                                            <p>Book</p>
+                                            <span>Now</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="descriptioniconsarchivetour">
+                                    <p class="descriptionarchivetour"><span class="ddate">All Departure Date</span></p>
+                                   
+                                </div>
+                            </div>
+                            <!--end right-->
+                        </div>
+                        <!--end archivetour-->
+                    </div>
                 </div>
                 <!--end container-->
             </section>
@@ -733,6 +828,7 @@
     <script src="js/jquery-ui.js"></script>
     <!--Jquery UI-->
     <script src="js/soon.min.js"></script>
+    <script src="js/sweetalert.min.js">  </script>
     <script src="js/excanvas.js"></script>
     <!--canvas need for ie-->
     <script src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
