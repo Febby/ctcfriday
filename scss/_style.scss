@@ -40,7 +40,7 @@ h3{
 	padding:0px;
 	font-weight:normal;	
 }
-.salesend{
+.salestxt{
 	text-align:center;
 	font-size:1.5em;
 	text-transform:uppercase;
@@ -1354,7 +1354,14 @@ canvas{
 	line-height:90px;
 	font-weight:400;
 }
-
+#sale-btn{
+	visibility:hidden;
+	
+}
+#my-soon-counter-2{
+	visibility:hidden;
+	
+}
 div#sale-btn:hover {
     background-color: #9C5507;
 }
@@ -2641,6 +2648,11 @@ visibility: hidden;
 }
 
 .sectionhome{
+	float:left;
+	width:100%;	
+}
+.sectionhome-tour{
+	margin-top:-100px;
 	float:left;
 	width:100%;	
 }

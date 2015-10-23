@@ -28,9 +28,26 @@
     <!--[if lt IE 9]>  
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
     <![endif]-->
-    <script type="text/javascript">
-    function soonCompleteCallback() {
-      console.log("Sales Ended");
+     <script type="text/javascript">
+    function salesStart() {
+      console.log("Sales start");
+      $("#my-soon-counter").hide();
+      $( "#sl-txt" ).html( "Sales Ends in" );
+          $("#my-soon-counter-2").css({
+          "visibility": "visible"
+        });
+          $(".sectionhome-tour").css({
+          "margin": "0"
+        });
+       
+          // sweetAlert("Sorry...", "Sales have ended", "error");
+            $("[id^=sale-btn]").css({
+          "visibility": "visible"
+        });
+    }
+    function salesEnd() {
+      console.log("Sales End");
+      // document.getElementById("my-soon-counter").style.display = "none";
       sweetAlert("Sorry...", "Sales have ended", "error");
         $("[id^=sale-btn]").hide();
     }
@@ -51,7 +68,7 @@
             <div class="tp-banner tp-banner-full-screen">
                 <ul>
                     <!-- SLIDE  -->
-                    <li data-transition="fade" data-slotamount="7">
+                    <li data-transition="none" data-slotamount="1">
                         <img src="img/ctc-travel-banner.jpg" style='background-color:#b2c4cc' alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                     </li>
                     <!-- SLIDE  -->
@@ -105,9 +122,11 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="salesend">Sales Ends in...</h3>
+                <h3 class="salestxt" id="sl-txt">Sales Starts in...</h3>
                 <!-- value 2015-10-21T12:00:00 -->
-                <div class="soon" id="my-soon-counter" data-due="2015-10-23T00:00:00" data-event-complete="soonCompleteCallback" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
+                <div class="soon" id="my-soon-counter" data-due="2015-10-23T20:38:00" data-event-complete="salesStart" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
+                </div>
+                <div class="soon" id="my-soon-counter-2" data-due="2015-10-23T21:40:00" data-event-complete="salesEnd" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
                 </div>
             </div>
         </div>
@@ -116,7 +135,7 @@
     </section>
     <!-- countdown section end -->
     <!--worldwide tour section-->
-    <section class="sectionhome">
+    <section class="sectionhome-tour">
         <!--start container-->
         <div class="container clearfix">
             <div class="grid_12">
@@ -433,7 +452,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">Discount $100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/8d-beijing-chengde-tianjin-yanqi-lake" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -472,7 +491,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">Discount $100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/8d-new-jiangnan-shanghai-yangzhou-zhenjiang-tour" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -511,7 +530,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">Discount $100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/8d-scenic-guilin-merryland-theme-park" id="" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -550,7 +569,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">$100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/8-days-fairyland-jiuzhaigou-huanglong-mt-emei-qiang-village" id="" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -589,7 +608,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">Discount $100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/8d-charming-yunnan-shangri-la" id="" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -628,7 +647,7 @@
                             <!--right-->
                             <div class="rightarchivetour">
                                 <div class="titledayarchivetour">
-                                    <p class="titlearchivetour">Discount $50 OFF* per pax</p>
+                                    <p class="titlearchivetour">Discount $100 OFF* per couple</p>
                                     <a href="https://www.ctc.com.sg/package-tours/worldwide-tours/8d-guangdong-chaoshan-meizhou-chuxitulou" id="" target="_blank">
                                         <div class="dayarchivetour" id="sale-btn">
                                             <p>Book</p>
@@ -855,6 +874,7 @@
     <!--settings-->
     <script src="js/share.js"></script>
     <script src="js/core.js"></script>
+
     <!--End js-->
 </body>
 

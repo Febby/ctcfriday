@@ -2,7 +2,7 @@
 var revapis;
 
 $(document).ready(function() {
-
+    
     revapis = jQuery('.tp-banner-full-screen').revolution({
         delay: 10000000,
         startwidth: 1170,
