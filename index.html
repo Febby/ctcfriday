@@ -50,6 +50,8 @@
       // document.getElementById("my-soon-counter").style.display = "none";
       sweetAlert("WE THANK YOU FOR YOUR SUPPORT", "Hope you had grabbed an awesome deal during the It's Travel Deals Friday Sale. We thank you for your support, stay tuned for our next sale!", "success");
         $("[id^=sale-btn]").hide();
+        $( "#sl-txt" ).html( "Thank Your For Your Support, Sales Have Ended!" );
+        $("#my-soon-counter-2").hide();
     }
     </script>
     <!--FAVICONS-->
@@ -124,9 +126,9 @@
                 </div>
                 <h3 class="salestxt" id="sl-txt">Sales Starts in...</h3>
                 <!-- value 2015-10-21T12:00:00 -->
-                <div class="soon" id="my-soon-counter" data-due="2015-10-23T21:57:00" data-event-complete="salesStart" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
+                <div class="soon" id="my-soon-counter" data-due="2015-10-23T22:07:00" data-event-complete="salesStart" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
                 </div>
-                <div class="soon" id="my-soon-counter-2" data-due="2015-10-23T21:58:00" data-event-complete="salesEnd" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
+                <div class="soon" id="my-soon-counter-2" data-due="2015-10-23T22:08:00" data-event-complete="salesEnd" data-layout="group label-uppercase" data-format="d,h,m,s" data-face="flip color-light shadow-soft fast corners-round">
                 </div>
             </div>
         </div>
@@ -730,7 +732,7 @@
                         <div class="archivetour yellow fade-left animate1 animated fadeInLeft">
                             <!--left-->
                             <div class="leftarchivetour">
-                                <a href="#"><img alt="" class="imgleftarchivetour opacity" src="img/SV7DA.png"></a>
+                                <a id="no-click" href="javascript:void(0)"><img alt="" class="imgleftarchivetour opacity" src="img/SV7DA.png"></a>
                                 <div class="pricetitleleftarchivetour">
                                     <p class="titleleftarchivetour">Australia 8D6N Adelaide, Melbourne, Tasmania &amp; Sydney Fly-Cruise (SV7DA)</p>
                                 </div>
